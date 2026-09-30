@@ -1,4 +1,12 @@
-import { ArrowRight, Heart, Mail, MessageCircle, Phone, type LucideIcon } from "lucide-react";
+import {
+  ArrowRight,
+  Heart,
+  Mail,
+  MessageCircle,
+  Phone,
+  TvMinimalPlay,
+  type LucideIcon,
+} from "lucide-react";
 import { locales, type Locale } from "@/i18n/config";
 import type { Dictionary } from "@/i18n/get-dictionary";
 import { site } from "@/lib/site";
@@ -10,6 +18,14 @@ export function CallToAction({ lang, t }: { lang: Locale; t: Dictionary["cta"] }
   const otherLang = locales.find((l) => l !== lang);
 
   const actions: Action[] = [];
+  if (site.youtube)
+    actions.push({
+      // Opens YouTube's "Subscribe" confirmation directly
+      href: `${site.youtube}?sub_confirmation=1`,
+      label: t.youtube,
+      Icon: TvMinimalPlay,
+      external: true,
+    });
   if (email) actions.push({ href: `mailto:${email}`, label: t.email, Icon: Mail });
   if (phone) actions.push({ href: `tel:${phone.replace(/\s+/g, "")}`, label: t.phone, Icon: Phone });
   if (whatsapp)

@@ -18,6 +18,10 @@ export function Footer({
 }) {
   const { email, phone, whatsapp } = site.contact;
   const hasContact = Boolean(email || phone || whatsapp);
+  const socials = [
+    ...(site.youtube ? [{ label: "YouTube", href: site.youtube }] : []),
+    ...site.socials,
+  ];
   const headingClass =
     "font-display text-xs font-bold uppercase tracking-[0.2em] text-white";
   const linkClass = "transition-colors hover:text-white";
@@ -110,11 +114,11 @@ export function Footer({
             </div>
           )}
 
-          {site.socials.length > 0 && (
+          {socials.length > 0 && (
             <div>
               <h2 className={headingClass}>{t.follow}</h2>
               <ul className="mt-5 flex flex-wrap gap-2 text-sm">
-                {site.socials.map((social) => (
+                {socials.map((social) => (
                   <li key={social.href}>
                     <a
                       href={social.href}

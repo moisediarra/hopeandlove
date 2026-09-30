@@ -24,6 +24,9 @@ export const site = {
     whatsapp: "",
   },
 
-  /** Réseaux sociaux, ex. { label: "YouTube", href: "https://youtube.com/@hopeandlovetv" } */
+  /** Chaîne YouTube : bouton « S'abonner » de la section Contact et lien dans le pied de page. */
+  youtube: "https://www.youtube.com/@HopeAndLoveTV",
+
+  /** Autres réseaux sociaux, ex. { label: "Facebook", href: "https://facebook.com/hopeandlovetv" } */
   socials: [] as { label: string; href: string }[],
 };

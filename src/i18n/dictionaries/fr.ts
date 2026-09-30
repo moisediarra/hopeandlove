@@ -165,6 +165,7 @@ const fr = {
     title: "Parce que nous aimons, nous agissons",
     subtitle: "Because we love, we act",
     text: "Églises, ONG, associations, partenaires et bonnes volontés : rejoignez-nous pour faire des médias un instrument d’espoir, de foi et de transformation.",
+    youtube: "S’abonner sur YouTube",
     email: "Nous écrire",
     phone: "Nous appeler",
     whatsapp: "WhatsApp",

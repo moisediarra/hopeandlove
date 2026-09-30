@@ -160,6 +160,7 @@ const en: Dictionary = {
     title: "Because we love, we act",
     subtitle: "Parce que nous aimons, nous agissons",
     text: "Churches, NGOs, associations, partners and people of goodwill: join us in making media an instrument of hope, faith and transformation.",
+    youtube: "Subscribe on YouTube",
     email: "Email us",
     phone: "Call us",
     whatsapp: "WhatsApp",
