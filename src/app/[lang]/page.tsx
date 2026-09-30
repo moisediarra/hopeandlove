@@ -1,0 +1,34 @@
+import { notFound } from "next/navigation";
+import { Footer } from "@/components/footer";
+import { Header } from "@/components/header";
+import { About } from "@/components/sections/about";
+import { Audience } from "@/components/sections/audience";
+import { CallToAction } from "@/components/sections/call-to-action";
+import { Hero } from "@/components/sections/hero";
+import { Mission } from "@/components/sections/mission";
+import { Programs } from "@/components/sections/programs";
+import { Vision } from "@/components/sections/vision";
+import { isLocale } from "@/i18n/config";
+import { getDictionary } from "@/i18n/get-dictionary";
+
+export default async function Home({ params }: PageProps<"/[lang]">) {
+  const { lang } = await params;
+  if (!isLocale(lang)) notFound();
+  const dict = await getDictionary(lang);
+
+  return (
+    <>
+      <Header lang={lang} nav={dict.nav} />
+      <main id="main" tabIndex={-1} className="outline-none">
+        <Hero t={dict.hero} />
+        <About t={dict.about} />
+        <Vision t={dict.vision} />
+        <Mission t={dict.mission} />
+        <Programs t={dict.programs} />
+        <Audience t={dict.audience} />
+        <CallToAction lang={lang} t={dict.cta} />
+      </main>
+      <Footer lang={lang} nav={dict.nav} t={dict.footer} slogan={dict.hero.slogan} />
+    </>
+  );
+}

@@ -1,0 +1,63 @@
+@import "tailwindcss";
+
+/* Fonts are loaded with next/font in app/[lang]/layout.tsx */
+@theme inline {
+  --font-sans: var(--font-nunito), ui-sans-serif, system-ui, sans-serif;
+  --font-display: var(--font-montserrat), ui-sans-serif, system-ui, sans-serif;
+  --font-script: var(--font-dancing), cursive;
+}
+
+/* Brand palette sampled from the Hope and Love logo */
+@theme {
+  --color-plum-50: #f8f2fc;
+  --color-plum-100: #efe3f8;
+  --color-plum-200: #dcc4ef;
+  --color-plum-300: #c29be2;
+  --color-plum-400: #9f63cb;
+  --color-plum-500: #7d2fb0;
+  --color-plum-600: #6a1d9a;
+  --color-plum-700: #561084;
+  --color-plum-800: #4d0a73;
+  --color-plum-900: #3c0364;
+  --color-plum-950: #22033a;
+
+  --color-leaf-50: #f1f9ec;
+  --color-leaf-100: #e1f2d5;
+  --color-leaf-500: #56ab22;
+  --color-leaf-600: #469d12;
+  --color-leaf-700: #377d0e;
+
+  --color-sun-50: #fff9e8;
+  --color-sun-100: #fdefc4;
+  --color-sun-300: #fbd060;
+  --color-sun-400: #fbc035;
+  --color-sun-500: #f9b21a;
+  --color-sun-600: #e39a00;
+  --color-sun-700: #b77d00;
+  --color-sun-800: #8a5e00;
+
+  --color-cream: #fffbf3;
+  --color-ink: #22112f;
+  --color-muted: #5d5268;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 5.5rem;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+body {
+  background: var(--color-cream);
+  color: var(--color-ink);
+}
+
+::selection {
+  background: var(--color-sun-300);
+  color: var(--color-plum-950);
+}
