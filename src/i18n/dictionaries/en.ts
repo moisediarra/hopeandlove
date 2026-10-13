@@ -20,6 +20,7 @@ const en: Dictionary = {
     actions: "What we do",
     audience: "Audience",
     contact: "Contact",
+    donate: "Donate",
     openMenu: "Open menu",
     closeMenu: "Close menu",
     language: "Language",
@@ -146,6 +147,45 @@ const en: Dictionary = {
     ],
     closing:
       "…and everyone who cares about **humanitarian and spiritual causes**.",
+  },
+
+  donate: {
+    eyebrow: "Donate",
+    title: "Support our work",
+    intro:
+      "Every gift, whatever its size, helps us reach out to **underprivileged children, vulnerable families, young people who have lost their way and the forgotten sick**.",
+    supportsTitle: "Your gift supports",
+    supports: [
+      { key: "solidarity", label: "Solidarity actions" },
+      { key: "education", label: "Workshops and training" },
+      { key: "health", label: "Health and prevention" },
+      { key: "family", label: "Families and young people" },
+    ],
+    methodsTitle: "How to give",
+    online: {
+      title: "Give online",
+      text: "Secure payment by card or online account.",
+      button: "Donate online",
+    },
+    mobileMoney: {
+      title: "Mobile Money",
+      text: "Send your gift to the number below.",
+      name: "Account name",
+    },
+    bank: {
+      title: "Bank transfer",
+      holder: "Account holder",
+      bank: "Bank",
+      iban: "IBAN",
+      bic: "BIC / SWIFT",
+    },
+    copy: "Copy",
+    copied: "Copied!",
+    contactTitle: "Contact us to give",
+    contactText: "Email or call us and we will tell you how to make your gift.",
+    soonTitle: "Coming soon",
+    soonText: "Ways to give will be published on this page very soon.",
+    thanks: "Thank you for your generosity!",
   },
 
   cta: {

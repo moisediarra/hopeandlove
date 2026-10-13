@@ -24,9 +24,23 @@ export const site = {
     whatsapp: "",
   },
 
+  /**
+   * Moyens de don affichés dans la section « Faire un don ».
+   * Chaque moyen vide est masqué. Tant qu'aucun n'est renseigné, la section invite à nous
+   * contacter (si un e-mail, un téléphone ou un WhatsApp est renseigné ci-dessus).
+   */
+  donate: {
+    /** Lien de paiement en ligne (PayPal, Stripe, HelloAsso…), ex. "https://www.paypal.com/donate/?hosted_button_id=XXXX" */
+    onlineUrl: "",
+    /** Comptes Mobile Money, ex. { operator: "Orange Money", number: "+225 07 00 00 00 00", name: "Hope and Love" } */
+    mobileMoney: [] as { operator: string; number: string; name?: string }[],
+    /** Virement bancaire : laisser `iban` vide pour masquer ce moyen. */
+    bank: { holder: "", bank: "", iban: "", bic: "" },
+  },
+
   /** Chaîne YouTube : bouton « S'abonner » de la section Contact et lien dans le pied de page. */
   youtube: "https://www.youtube.com/@HopeAndLoveTV",
 
-  /** Autres réseaux sociaux, ex. { label: "Facebook", href: "https://facebook.com/hopeandlovetv" } */
+  /** Autres réseaux sociaux, ex. { label: "Facebook", href: "https://facebook.com/hopeandlove" } */
   socials: [] as { label: string; href: string }[],
 };

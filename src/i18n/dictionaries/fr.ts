@@ -19,6 +19,7 @@ const fr = {
     actions: "Nos actions",
     audience: "Publics",
     contact: "Contact",
+    donate: "Faire un don",
     openMenu: "Ouvrir le menu",
     closeMenu: "Fermer le menu",
     language: "Langue",
@@ -152,6 +153,45 @@ const fr = {
     ],
     closing:
       "…et toutes les personnes sensibles à la **cause humanitaire et spirituelle**.",
+  },
+
+  donate: {
+    eyebrow: "Faire un don",
+    title: "Soutenez nos actions",
+    intro:
+      "Chaque don, quel que soit son montant, nous aide à tendre la main aux **enfants défavorisés, aux familles vulnérables, aux jeunes sans repères et aux malades oubliés**.",
+    supportsTitle: "Votre don soutient",
+    supports: [
+      { key: "solidarity", label: "Les actions solidaires" },
+      { key: "education", label: "Les ateliers et formations" },
+      { key: "health", label: "La santé et la prévention" },
+      { key: "family", label: "Les familles et la jeunesse" },
+    ],
+    methodsTitle: "Comment donner",
+    online: {
+      title: "Don en ligne",
+      text: "Paiement sécurisé par carte bancaire ou compte en ligne.",
+      button: "Faire un don en ligne",
+    },
+    mobileMoney: {
+      title: "Mobile Money",
+      text: "Envoyez votre don au numéro ci-dessous.",
+      name: "Nom du compte",
+    },
+    bank: {
+      title: "Virement bancaire",
+      holder: "Titulaire",
+      bank: "Banque",
+      iban: "IBAN",
+      bic: "BIC / SWIFT",
+    },
+    copy: "Copier",
+    copied: "Copié !",
+    contactTitle: "Contactez-nous pour donner",
+    contactText: "Écrivez-nous ou appelez-nous : nous vous indiquerons comment faire votre don.",
+    soonTitle: "Bientôt disponible",
+    soonText: "Les moyens de faire un don seront publiés très prochainement sur cette page.",
+    thanks: "Merci pour votre générosité !",
   },
 
   cta: {

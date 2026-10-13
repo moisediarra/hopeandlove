@@ -1,7 +1,8 @@
 import Link from "next/link";
+import { Heart } from "lucide-react";
 import { localeNames, locales, type Locale } from "@/i18n/config";
 import type { Dictionary } from "@/i18n/get-dictionary";
-import { SECTIONS } from "@/lib/sections";
+import { DONATE_ID, SECTIONS } from "@/lib/sections";
 import { site } from "@/lib/site";
 import { BrandMark, Wordmark } from "./brand";
 
@@ -57,6 +58,15 @@ export function Footer({
                 </a>
               </li>
             ))}
+            <li>
+              <a
+                href={`#${DONATE_ID}`}
+                className="inline-flex items-center gap-1.5 font-bold text-sun-400 transition-colors hover:text-sun-300"
+              >
+                <Heart className="size-3.5" aria-hidden />
+                {nav.donate}
+              </a>
+            </li>
           </ul>
         </nav>
 

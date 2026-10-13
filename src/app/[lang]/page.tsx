@@ -5,6 +5,7 @@ import { About } from "@/components/sections/about";
 import { Actions } from "@/components/sections/actions";
 import { Audience } from "@/components/sections/audience";
 import { CallToAction } from "@/components/sections/call-to-action";
+import { Donate } from "@/components/sections/donate";
 import { Hero } from "@/components/sections/hero";
 import { Mission } from "@/components/sections/mission";
 import { Vision } from "@/components/sections/vision";
@@ -26,6 +27,7 @@ export default async function Home({ params }: PageProps<"/[lang]">) {
         <Mission t={dict.mission} />
         <Actions t={dict.actions} />
         <Audience t={dict.audience} />
+        <Donate t={dict.donate} />
         <CallToAction lang={lang} t={dict.cta} />
       </main>
       <Footer lang={lang} nav={dict.nav} t={dict.footer} slogan={dict.hero.slogan} />

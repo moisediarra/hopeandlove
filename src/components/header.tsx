@@ -2,10 +2,10 @@
 
 import Link from "next/link";
 import { useEffect, useState } from "react";
-import { Menu, X } from "lucide-react";
+import { Heart, Menu, X } from "lucide-react";
 import { localeNames, locales, type Locale } from "@/i18n/config";
 import type { Dictionary } from "@/i18n/get-dictionary";
-import { SECTIONS } from "@/lib/sections";
+import { DONATE_ID, SECTIONS } from "@/lib/sections";
 import { BrandMark, Wordmark } from "./brand";
 
 export function Header({ lang, nav }: { lang: Locale; nav: Dictionary["nav"] }) {
@@ -27,7 +27,7 @@ export function Header({ lang, nav }: { lang: Locale; nav: Dictionary["nav"] }) 
       },
       { rootMargin: "-45% 0px -50% 0px" },
     );
-    for (const id of ["top", ...SECTIONS]) {
+    for (const id of ["top", ...SECTIONS, DONATE_ID]) {
       const el = document.getElementById(id);
       if (el) observer.observe(el);
     }
@@ -61,7 +61,7 @@ export function Header({ lang, nav }: { lang: Locale; nav: Dictionary["nav"] }) 
         {nav.skip}
       </a>
 
-      <div className="mx-auto flex h-18 max-w-7xl items-center justify-between gap-3 px-4 sm:gap-6 sm:px-8">
+      <div className="mx-auto flex h-18 max-w-7xl items-center justify-between gap-3 px-4 sm:gap-6 sm:px-8 lg:gap-4 xl:gap-6">
         <Link
           href={`/${lang}`}
           aria-label={nav.home}
@@ -72,13 +72,13 @@ export function Header({ lang, nav }: { lang: Locale; nav: Dictionary["nav"] }) 
         </Link>
 
         <nav aria-label={nav.main} className="hidden lg:block">
-          <ul className="flex items-center gap-1">
+          <ul className="flex items-center gap-0.5 xl:gap-1">
             {SECTIONS.map((id) => (
               <li key={id}>
                 <a
                   href={`#${id}`}
                   aria-current={active === id ? "true" : undefined}
-                  className={`rounded-full px-3.5 py-2 font-display text-[0.8rem] font-semibold transition-colors ${
+                  className={`whitespace-nowrap rounded-full px-2.5 py-2 font-display text-[0.8rem] font-semibold transition-colors xl:px-3.5 ${
                     active === id
                       ? "bg-plum-100 text-plum-900"
                       : "text-muted hover:text-plum-800"
@@ -92,6 +92,15 @@ export function Header({ lang, nav }: { lang: Locale; nav: Dictionary["nav"] }) 
         </nav>
 
         <div className="flex items-center gap-2">
+          <a
+            href={`#${DONATE_ID}`}
+            aria-current={active === DONATE_ID ? "true" : undefined}
+            className="hidden items-center gap-1.5 whitespace-nowrap rounded-full bg-sun-500 px-4 py-2 font-display text-[0.8rem] font-bold text-plum-950 shadow-sm shadow-sun-700/20 transition-colors hover:bg-sun-400 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-plum-600 lg:inline-flex"
+          >
+            <Heart className="size-4" aria-hidden />
+            {nav.donate}
+          </a>
+
           {/* Small screens: a single pill leading to the other language */}
           {locales
             .filter((locale) => locale !== lang)
@@ -163,6 +172,16 @@ export function Header({ lang, nav }: { lang: Locale; nav: Dictionary["nav"] }) 
                 </a>
               </li>
             ))}
+            <li className="pt-2">
+              <a
+                href={`#${DONATE_ID}`}
+                onClick={() => setOpen(false)}
+                className="flex items-center justify-center gap-2 rounded-xl bg-sun-500 px-4 py-3 font-display font-bold text-plum-950 hover:bg-sun-400"
+              >
+                <Heart className="size-5" aria-hidden />
+                {nav.donate}
+              </a>
+            </li>
           </ul>
         </nav>
       )}
