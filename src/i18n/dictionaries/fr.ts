@@ -3,20 +3,20 @@
 
 const fr = {
   meta: {
-    title: "Hope and Love TV — La chaîne qui inspire, informe et impacte",
+    title: "Hope and Love — Plus qu’une aide, une main d’amour et d’espoir",
     description:
-      "Hope and Love TV, télévision humanitaire et chrétienne née d’Afrique : des programmes qui édifient, sensibilisent et inspirent les peuples à agir pour un monde meilleur.",
-    ogAlt: "Hope and Love TV — Plus qu’une aide, une main d’amour et d’espoir",
+      "Hope and Love, organisation humanitaire et chrétienne née d’Afrique : agir avec foi, amour et espérance auprès des familles, des jeunes et des plus vulnérables.",
+    ogAlt: "Hope and Love — Plus qu’une aide, une main d’amour et d’espoir",
   },
 
   nav: {
     skip: "Aller au contenu",
-    home: "Accueil Hope and Love TV",
+    home: "Accueil Hope and Love",
     main: "Navigation principale",
     about: "À propos",
     vision: "Vision",
     mission: "Mission",
-    programs: "Programmes",
+    actions: "Nos actions",
     audience: "Publics",
     contact: "Contact",
     openMenu: "Ouvrir le menu",
@@ -25,16 +25,15 @@ const fr = {
   },
 
   hero: {
-    badge: "Télévision humanitaire et chrétienne",
-    titleLead: "La chaîne qui",
-    titleWords: ["inspire", "informe", "impacte"],
+    badge: "Organisation humanitaire et chrétienne",
+    titleLead: "Agir avec",
+    titleWords: ["foi", "amour", "espérance"],
     titleAnd: "et",
     slogan: "Plus qu’une aide, une main d’amour et d’espoir",
     intro:
-      "Hope and Love TV se veut **la première télévision humanitaire chrétienne internationale née d’Afrique**, au service de l’amour, de l’espérance et de l’action solidaire.",
-    primaryCta: "Découvrir nos programmes",
+      "Née d’Afrique, **Hope and Love** est une **organisation humanitaire et chrétienne** au service de l’amour, de l’espérance et de l’action solidaire.",
+    primaryCta: "Découvrir nos actions",
     secondaryCta: "Notre vision",
-    values: ["Foi", "Amour", "Espérance"],
     posterAlt:
       "Deux mains tenant un cœur violet devant une famille au soleil levant, avec le logo Hope and Love",
     origin: "Née d’Afrique, pour les nations",
@@ -42,11 +41,10 @@ const fr = {
 
   about: {
     eyebrow: "Contexte",
-    title: "Pourquoi Hope and Love TV ?",
+    title: "Pourquoi Hope and Love ?",
     paragraphs: [
-      "Dans un monde marqué par la souffrance, l’indifférence et la perte des valeurs, les médias jouent un rôle capital dans la transformation des mentalités.",
-      "Cependant, la plupart des chaînes privilégient le divertissement au détriment de l’éducation, de la foi et de l’humanitaire.",
-      "C’est dans cette vision qu’est née **Hope and Love TV**, une **télévision humanitaire et chrétienne** qui veut **redonner la place à l’amour, à l’espérance et à l’action solidaire**.",
+      "Dans un monde marqué par la souffrance, l’indifférence et la perte des valeurs, beaucoup attendent une main tendue.",
+      "C’est dans cette vision qu’est née **Hope and Love**, une **organisation humanitaire et chrétienne** qui veut **redonner la place à l’amour, à l’espérance et à l’action solidaire**.",
     ],
     challengeLabel: "Le constat",
     challenges: ["Souffrance", "Indifférence", "Perte des valeurs"],
@@ -58,8 +56,8 @@ const fr = {
   vision: {
     eyebrow: "Notre vision",
     quote:
-      "« Faire des médias un instrument d’espoir, de foi et de transformation pour les nations. »",
-    text: "Hope and Love TV se veut **la première télévision humanitaire chrétienne internationale née d’Afrique**, diffusant des contenus qui édifient, sensibilisent et inspirent les peuples à agir pour un monde meilleur.",
+      "« Être un instrument d’espoir, de foi et de transformation pour les nations. »",
+    text: "Née d’Afrique, Hope and Love se veut **une organisation humanitaire et chrétienne de portée internationale**, qui édifie, sensibilise et inspire les peuples à agir pour un monde meilleur.",
     pillars: ["Édifier", "Sensibiliser", "Inspirer"],
   },
 
@@ -70,12 +68,12 @@ const fr = {
       {
         key: "love",
         title: "Promouvoir l’amour",
-        text: "Promouvoir l’amour de Dieu et des autres à travers des programmes inspirants.",
+        text: "Promouvoir l’amour de Dieu et des autres à travers des actions concrètes et inspirantes.",
       },
       {
-        key: "spotlight",
-        title: "Mettre en lumière",
-        text: "Mettre en lumière les **actions humanitaires** réalisées en Afrique et dans le monde.",
+        key: "act",
+        title: "Agir pour les autres",
+        text: "Mener et soutenir des **actions humanitaires** en Afrique et dans le monde.",
       },
       {
         key: "voice",
@@ -85,22 +83,22 @@ const fr = {
       {
         key: "educate",
         title: "Former et sensibiliser",
-        text: "Former et sensibiliser à travers des émissions éducatives sur **la famille, la jeunesse, le leadership et la santé**.",
+        text: "Former et sensibiliser à travers des ateliers et des rencontres sur **la famille, la jeunesse, le leadership et la santé**.",
       },
       {
         key: "platform",
         title: "Valoriser les initiatives",
-        text: "Être une **plateforme de valorisation** des initiatives locales et internationales qui changent des vies.",
+        text: "Soutenir et **valoriser les initiatives** locales et internationales qui changent des vies.",
       },
     ],
   },
 
-  programs: {
-    eyebrow: "Contenus et rubriques",
-    title: "Nos programmes",
+  actions: {
+    eyebrow: "Ce que nous faisons",
+    title: "Nos domaines d’action",
     intro:
-      "Six grandes rubriques pour nourrir la foi, éclairer les esprits et encourager l’action.",
-    label: "Rubrique",
+      "Six domaines pour nourrir la foi, éclairer les esprits et encourager l’action solidaire.",
+    label: "Domaine",
     items: [
       {
         key: "faith",
@@ -110,7 +108,7 @@ const fr = {
       {
         key: "education",
         title: "Éducation et leadership",
-        topics: ["Émissions éducatives", "Développement personnel", "Formation"],
+        topics: ["Ateliers éducatifs", "Développement personnel", "Formation"],
       },
       {
         key: "family",
@@ -125,17 +123,12 @@ const fr = {
       {
         key: "humanitarian",
         title: "Humanitaire et social",
-        topics: [
-          "Reportages sur les actions solidaires",
-          "ONG",
-          "Associations",
-          "Projets communautaires",
-        ],
+        topics: ["Actions solidaires", "ONG et associations", "Projets communautaires"],
       },
       {
         key: "culture",
         title: "Culture et société",
-        topics: ["Documentaires", "Débats", "Talents africains", "Entrepreneuriat"],
+        topics: ["Conférences et débats", "Talents africains", "Entrepreneuriat"],
       },
       {
         key: "health",
@@ -164,16 +157,16 @@ const fr = {
   cta: {
     title: "Parce que nous aimons, nous agissons",
     subtitle: "Because we love, we act",
-    text: "Églises, ONG, associations, partenaires et bonnes volontés : rejoignez-nous pour faire des médias un instrument d’espoir, de foi et de transformation.",
+    text: "Églises, ONG, associations, partenaires et bonnes volontés : rejoignez-nous pour être, ensemble, un instrument d’espoir, de foi et de transformation.",
     youtube: "S’abonner sur YouTube",
     email: "Nous écrire",
     phone: "Nous appeler",
     whatsapp: "WhatsApp",
-    fallback: "Découvrir nos programmes",
+    fallback: "Découvrir nos actions",
   },
 
   footer: {
-    tagline: "La chaîne qui inspire, informe et impacte.",
+    tagline: "Organisation humanitaire et chrétienne née d’Afrique.",
     values: "Foi • Amour • Espérance",
     navigation: "Navigation",
     contact: "Contact",

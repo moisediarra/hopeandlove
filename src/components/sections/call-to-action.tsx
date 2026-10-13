@@ -92,7 +92,7 @@ export function CallToAction({ lang, t }: { lang: Locale; t: Dictionary["cta"] }
             ))
           ) : (
             <a
-              href="#programs"
+              href="#actions"
               className="group inline-flex items-center gap-2 rounded-full bg-sun-500 px-6 py-3.5 font-display text-sm font-bold text-plum-950 shadow-lg shadow-black/20 transition hover:bg-sun-400 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sun-300"
             >
               {t.fallback}

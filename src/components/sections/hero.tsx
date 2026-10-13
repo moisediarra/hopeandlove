@@ -1,14 +1,12 @@
 import Image from "next/image";
-import { ArrowRight, Globe, Tv } from "lucide-react";
+import { ArrowRight, Globe, HandHeart } from "lucide-react";
 import type { Dictionary } from "@/i18n/get-dictionary";
 import { RichText } from "@/lib/rich-text";
 import poster from "../../../public/images/affiche-main-d-amour.jpg";
 
-// Foi / Amour / Espérance echo the three figures of the logo.
-const valueDots = ["bg-plum-600", "bg-sun-500", "bg-leaf-600"];
-
 export function Hero({ t }: { t: Dictionary["hero"] }) {
-  const [inspire, inform, impact] = t.titleWords;
+  // Foi / Amour / Espérance, in the colours of the logo's three figures.
+  const [faith, love, hope] = t.titleWords;
 
   return (
     <section
@@ -25,7 +23,7 @@ export function Hero({ t }: { t: Dictionary["hero"] }) {
       <div className="mx-auto grid max-w-7xl items-center gap-16 px-5 pb-24 sm:px-8 lg:grid-cols-[1.08fr_0.92fr] lg:pb-32">
         <div>
           <p className="inline-flex items-center gap-2 rounded-full border border-plum-200 bg-white/70 px-4 py-1.5 text-sm font-semibold text-plum-800 shadow-sm backdrop-blur">
-            <Tv className="size-4 text-leaf-600" aria-hidden />
+            <HandHeart className="size-4 text-leaf-600" aria-hidden />
             {t.badge}
           </p>
 
@@ -33,9 +31,9 @@ export function Hero({ t }: { t: Dictionary["hero"] }) {
             id="hero-title"
             className="mt-6 text-balance font-display text-[2.5rem] font-extrabold leading-[1.05] tracking-tight text-plum-950 sm:text-6xl lg:text-[4.1rem]"
           >
-            {t.titleLead} <span className="text-plum-600">{inspire}</span>,{" "}
-            <span className="text-leaf-600">{inform}</span> {t.titleAnd}{" "}
-            <span className="text-sun-700">{impact}</span>.
+            {t.titleLead} <span className="text-plum-600">{faith}</span>,{" "}
+            <span className="text-sun-700">{love}</span> {t.titleAnd}{" "}
+            <span className="text-leaf-600">{hope}</span>.
           </h1>
 
           <p className="mt-6 font-script text-[1.9rem] leading-snug text-plum-700 sm:text-[2.2rem]">
@@ -48,7 +46,7 @@ export function Hero({ t }: { t: Dictionary["hero"] }) {
 
           <div className="mt-9 flex flex-wrap gap-3">
             <a
-              href="#programs"
+              href="#actions"
               className="group inline-flex items-center gap-2 rounded-full bg-plum-800 px-6 py-3.5 font-display text-sm font-bold text-white shadow-lg shadow-plum-900/20 transition hover:bg-plum-700 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-plum-600"
             >
               {t.primaryCta}
@@ -64,15 +62,6 @@ export function Hero({ t }: { t: Dictionary["hero"] }) {
               {t.secondaryCta}
             </a>
           </div>
-
-          <ul className="mt-11 flex flex-wrap items-center gap-x-7 gap-y-2 font-display text-sm font-bold uppercase tracking-[0.2em] text-plum-900">
-            {t.values.map((value, i) => (
-              <li key={value} className="flex items-center gap-2.5">
-                <span aria-hidden className={`size-2.5 rounded-full ${valueDots[i]}`} />
-                {value}
-              </li>
-            ))}
-          </ul>
         </div>
 
         <div className="relative mx-auto w-full max-w-md lg:max-w-none">

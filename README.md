@@ -1,6 +1,6 @@
-# Hope and Love TV — site web
+# Hope and Love — site web
 
-Site vitrine bilingue (français / anglais) de **Hope and Love TV**, la chaîne humanitaire et chrétienne.
+Site vitrine bilingue (français / anglais) de **Hope and Love**, organisation humanitaire et chrétienne.
 Construit avec Next.js 16 (App Router), Tailwind CSS 4 et TypeScript, prêt à être déployé sur Vercel.
 
 - `/fr` : version française (langue par défaut)

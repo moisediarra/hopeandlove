@@ -1,9 +1,9 @@
 import {
   GraduationCap,
+  HandHeart,
   Heart,
   Megaphone,
   Sparkles,
-  Sun,
   type LucideIcon,
 } from "lucide-react";
 import type { Dictionary } from "@/i18n/get-dictionary";
@@ -12,7 +12,7 @@ import { SectionHeading } from "../section-heading";
 
 const icons: Record<string, LucideIcon> = {
   love: Heart,
-  spotlight: Sun,
+  act: HandHeart,
   voice: Megaphone,
   educate: GraduationCap,
   platform: Sparkles,

@@ -37,12 +37,12 @@ const tones = [
   },
 ];
 
-export function Programs({ t }: { t: Dictionary["programs"] }) {
+export function Actions({ t }: { t: Dictionary["actions"] }) {
   return (
-    <section id="programs" aria-labelledby="programs-title" className="bg-white py-24 lg:py-32">
+    <section id="actions" aria-labelledby="actions-title" className="bg-white py-24 lg:py-32">
       <div className="mx-auto max-w-7xl px-5 sm:px-8">
         <SectionHeading
-          id="programs-title"
+          id="actions-title"
           eyebrow={t.eyebrow}
           title={t.title}
           intro={t.intro}

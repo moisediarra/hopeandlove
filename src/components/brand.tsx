@@ -6,7 +6,7 @@ export function BrandMark({ className = "" }: { className?: string }) {
   return <Image src={logoMark} alt="" sizes="96px" className={className} />;
 }
 
-/** "HOPE AND LOVE" set like the logo, followed by a small TV badge. Font size is inherited. */
+/** "HOPE AND LOVE" set like the logo. Font size is inherited. */
 export function Wordmark({ inverted = false }: { inverted?: boolean }) {
   return (
     <span
@@ -23,9 +23,6 @@ export function Wordmark({ inverted = false }: { inverted?: boolean }) {
         AND
       </span>
       LOVE
-      <span className="ml-1 rounded-md bg-sun-500 px-1.5 py-[3px] text-[0.6em] font-extrabold tracking-wide text-plum-950">
-        TV
-      </span>
     </span>
   );
 }

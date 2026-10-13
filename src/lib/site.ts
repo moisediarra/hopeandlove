@@ -3,7 +3,7 @@
  * Renseignez les coordonnées ci-dessous : chaque élément vide est simplement masqué sur le site.
  */
 export const site = {
-  name: "Hope and Love TV",
+  name: "Hope and Love",
 
   /**
    * URL publique du site (sans « / » final). Sur Vercel, le domaine de production est détecté
@@ -16,7 +16,7 @@ export const site = {
       : "http://localhost:3000"),
 
   contact: {
-    /** ex. "contact@hopeandlove.tv" */
+    /** ex. "contact@exemple.org" */
     email: "",
     /** ex. "+225 07 00 00 00 00" */
     phone: "",

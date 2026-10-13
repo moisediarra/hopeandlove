@@ -4,20 +4,20 @@ import type { Dictionary } from "./fr";
 
 const en: Dictionary = {
   meta: {
-    title: "Hope and Love TV — The channel that inspires, informs and impacts",
+    title: "Hope and Love — More than help, a hand of love and hope",
     description:
-      "Hope and Love TV, a humanitarian and Christian television channel born in Africa: programs that uplift, raise awareness and inspire people to act for a better world.",
-    ogAlt: "Hope and Love TV — More than help, a hand of love and hope",
+      "Hope and Love, a humanitarian and Christian organization born in Africa: acting with faith, love and hope alongside families, young people and the most vulnerable.",
+    ogAlt: "Hope and Love — More than help, a hand of love and hope",
   },
 
   nav: {
     skip: "Skip to content",
-    home: "Hope and Love TV home",
+    home: "Hope and Love home",
     main: "Main navigation",
     about: "About",
     vision: "Vision",
     mission: "Mission",
-    programs: "Programs",
+    actions: "What we do",
     audience: "Audience",
     contact: "Contact",
     openMenu: "Open menu",
@@ -26,16 +26,15 @@ const en: Dictionary = {
   },
 
   hero: {
-    badge: "Humanitarian & Christian television",
-    titleLead: "The channel that",
-    titleWords: ["inspires", "informs", "impacts"],
+    badge: "Humanitarian & Christian organization",
+    titleLead: "Acting with",
+    titleWords: ["faith", "love", "hope"],
     titleAnd: "and",
     slogan: "More than help, a hand of love and hope",
     intro:
-      "Hope and Love TV aims to be **the first international Christian humanitarian television channel born in Africa**, devoted to love, hope and solidarity in action.",
-    primaryCta: "Explore our programs",
+      "Born in Africa, **Hope and Love** is a **humanitarian and Christian organization** devoted to love, hope and solidarity in action.",
+    primaryCta: "Explore our work",
     secondaryCta: "Our vision",
-    values: ["Faith", "Love", "Hope"],
     posterAlt:
       "Two hands holding a purple heart in front of a family at sunrise, with the Hope and Love logo",
     origin: "Born in Africa, for the nations",
@@ -43,11 +42,10 @@ const en: Dictionary = {
 
   about: {
     eyebrow: "Context",
-    title: "Why Hope and Love TV?",
+    title: "Why Hope and Love?",
     paragraphs: [
-      "In a world marked by suffering, indifference and a loss of values, the media play a vital role in transforming mindsets.",
-      "Yet most channels favor entertainment at the expense of education, faith and humanitarian causes.",
-      "It is from this vision that **Hope and Love TV** was born: a **humanitarian and Christian television channel** determined to **restore love, hope and solidarity to their rightful place**.",
+      "In a world marked by suffering, indifference and a loss of values, many are waiting for a helping hand.",
+      "It is from this vision that **Hope and Love** was born: a **humanitarian and Christian organization** determined to **restore love, hope and solidarity to their rightful place**.",
     ],
     challengeLabel: "The reality",
     challenges: ["Suffering", "Indifference", "Loss of values"],
@@ -58,9 +56,8 @@ const en: Dictionary = {
 
   vision: {
     eyebrow: "Our vision",
-    quote:
-      "“To make media an instrument of hope, faith and transformation for the nations.”",
-    text: "Hope and Love TV aims to be **the first international Christian humanitarian television channel born in Africa**, broadcasting content that uplifts, raises awareness and inspires people to act for a better world.",
+    quote: "“To be an instrument of hope, faith and transformation for the nations.”",
+    text: "Born in Africa, Hope and Love aims to be **a humanitarian and Christian organization with an international reach**, uplifting, raising awareness and inspiring people to act for a better world.",
     pillars: ["Uplift", "Raise awareness", "Inspire"],
   },
 
@@ -71,12 +68,12 @@ const en: Dictionary = {
       {
         key: "love",
         title: "Promote love",
-        text: "Promote the love of God and of others through inspiring programs.",
+        text: "Promote the love of God and of others through concrete, inspiring action.",
       },
       {
-        key: "spotlight",
-        title: "Shine a light",
-        text: "Shine a light on **humanitarian work** carried out in Africa and around the world.",
+        key: "act",
+        title: "Act for others",
+        text: "Carry out and support **humanitarian action** in Africa and around the world.",
       },
       {
         key: "voice",
@@ -86,21 +83,21 @@ const en: Dictionary = {
       {
         key: "educate",
         title: "Educate and raise awareness",
-        text: "Educate and raise awareness through educational programs on **family, youth, leadership and health**.",
+        text: "Educate and raise awareness through workshops and gatherings on **family, youth, leadership and health**.",
       },
       {
         key: "platform",
         title: "Showcase initiatives",
-        text: "Be a **platform that showcases** local and international initiatives that change lives.",
+        text: "Support and **showcase local and international initiatives** that change lives.",
       },
     ],
   },
 
-  programs: {
-    eyebrow: "Content & programming",
-    title: "Our programs",
-    intro: "Six main categories to nourish faith, enlighten minds and encourage action.",
-    label: "Category",
+  actions: {
+    eyebrow: "What we do",
+    title: "Our areas of action",
+    intro: "Six areas to nourish faith, enlighten minds and encourage solidarity in action.",
+    label: "Area",
     items: [
       {
         key: "faith",
@@ -110,7 +107,7 @@ const en: Dictionary = {
       {
         key: "education",
         title: "Education & Leadership",
-        topics: ["Educational programs", "Personal development", "Training"],
+        topics: ["Educational workshops", "Personal development", "Training"],
       },
       {
         key: "family",
@@ -120,17 +117,12 @@ const en: Dictionary = {
       {
         key: "humanitarian",
         title: "Humanitarian & Social",
-        topics: [
-          "Reports on solidarity work",
-          "NGOs",
-          "Associations",
-          "Community projects",
-        ],
+        topics: ["Solidarity actions", "NGOs & associations", "Community projects"],
       },
       {
         key: "culture",
         title: "Culture & Society",
-        topics: ["Documentaries", "Debates", "African talent", "Entrepreneurship"],
+        topics: ["Talks & debates", "African talent", "Entrepreneurship"],
       },
       {
         key: "health",
@@ -159,16 +151,16 @@ const en: Dictionary = {
   cta: {
     title: "Because we love, we act",
     subtitle: "Parce que nous aimons, nous agissons",
-    text: "Churches, NGOs, associations, partners and people of goodwill: join us in making media an instrument of hope, faith and transformation.",
+    text: "Churches, NGOs, associations, partners and people of goodwill: join us and, together, let’s be an instrument of hope, faith and transformation.",
     youtube: "Subscribe on YouTube",
     email: "Email us",
     phone: "Call us",
     whatsapp: "WhatsApp",
-    fallback: "Explore our programs",
+    fallback: "Explore our work",
   },
 
   footer: {
-    tagline: "The channel that inspires, informs and impacts.",
+    tagline: "A humanitarian and Christian organization born in Africa.",
     values: "Faith • Love • Hope",
     navigation: "Navigation",
     contact: "Contact",

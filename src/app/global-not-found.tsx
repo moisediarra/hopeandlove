@@ -10,7 +10,7 @@ const nunito = Nunito_Sans({ subsets: ["latin"], variable: "--font-nunito" });
 
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),
-  title: "Page introuvable · Page not found — Hope and Love TV",
+  title: "Page introuvable · Page not found — Hope and Love",
 };
 
 // Shown for any URL that doesn't match a page. Bilingual because the language is unknown here.

@@ -46,7 +46,7 @@ export function Audience({ t }: { t: Dictionary["audience"] }) {
         <ul className="mx-auto mt-14 grid max-w-5xl grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-4">
           {t.groups.map((group, i) => {
             const Icon = icons[group.key] ?? Sparkles;
-            // The diaspora is highlighted: it closes the list and is a key audience of the channel.
+            // The diaspora is highlighted: it closes the list and is a key audience of Hope and Love.
             if (group.key === "diaspora") {
               return (
                 <li
