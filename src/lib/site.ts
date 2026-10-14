@@ -32,10 +32,10 @@ export const site = {
   donate: {
     /** Lien de paiement en ligne (PayPal, Stripe, HelloAsso…), ex. "https://www.paypal.com/donate/?hosted_button_id=XXXX" */
     onlineUrl: "",
-    /** Comptes Mobile Money, ex. { operator: "TMoney", number: "93 46 11 05", name: "Hope and Love" } */
+    /** Comptes Mobile Money, ex. { operator: "TMoney", number: "+228 93 46 11 05", name: "Hope and Love" } */
     mobileMoney: [
-      { operator: "TMoney", number: "93 46 11 05" },
-      { operator: "Moov Money Flooz", number: "96 26 96 13" },
+      { operator: "TMoney", number: "+228 93 46 11 05" },
+      { operator: "Moov Money Flooz", number: "+228 96 26 96 13" },
     ] as { operator: string; number: string; name?: string }[],
     /**
      * Virement bancaire : renseignez `account` (RIB) et/ou `iban`.

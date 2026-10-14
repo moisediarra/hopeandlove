@@ -51,6 +51,18 @@ function CardTitle({ Icon, tone, title, label }: { Icon: LucideIcon; tone: strin
   );
 }
 
+/** On very narrow screens, wraps only between the country code and the local number. */
+function PhoneNumber({ value }: { value: string }) {
+  const match = value.match(/^(\+\d+)\s+(.+)$/);
+  if (!match) return <span className="whitespace-nowrap">{value}</span>;
+  return (
+    <>
+      <span className="whitespace-nowrap">{match[1]}</span>{" "}
+      <span className="whitespace-nowrap">{match[2]}</span>
+    </>
+  );
+}
+
 export function Donate({ t }: { t: Dictionary["donate"] }) {
   const { onlineUrl, mobileMoney, bank } = site.donate;
   const { email, phone, whatsapp } = site.contact;
@@ -134,7 +146,7 @@ export function Donate({ t }: { t: Dictionary["donate"] }) {
                           {account.operator}
                         </p>
                         <p className="mt-1 font-display text-xl font-extrabold tracking-wide text-plum-900">
-                          {account.number}
+                          <PhoneNumber value={account.number} />
                         </p>
                         {account.name && (
                           <p className="mt-1 text-sm text-muted">
