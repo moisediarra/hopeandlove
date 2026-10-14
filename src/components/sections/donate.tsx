@@ -54,7 +54,8 @@ function CardTitle({ Icon, tone, title, label }: { Icon: LucideIcon; tone: strin
 export function Donate({ t }: { t: Dictionary["donate"] }) {
   const { onlineUrl, mobileMoney, bank } = site.donate;
   const { email, phone, whatsapp } = site.contact;
-  const hasMethods = Boolean(onlineUrl || mobileMoney.length || bank.iban);
+  const hasBank = Boolean(bank.account || bank.iban);
+  const hasMethods = Boolean(onlineUrl || mobileMoney.length || hasBank);
   const hasContact = Boolean(email || phone || whatsapp);
 
   return (
@@ -118,34 +119,42 @@ export function Donate({ t }: { t: Dictionary["donate"] }) {
               </div>
             )}
 
-            {mobileMoney.map((account) => (
-              <div key={account.operator + account.number} className={cardClass}>
-                <CardTitle
-                  Icon={Smartphone}
-                  tone={tones[2]}
-                  title={account.operator}
-                  label={t.mobileMoney.title}
-                />
+            {mobileMoney.length > 0 && (
+              <div className={cardClass}>
+                <CardTitle Icon={Smartphone} tone={tones[2]} title={t.mobileMoney.title} />
                 <p className="mt-4 text-muted">{t.mobileMoney.text}</p>
-                <div className="mt-4 flex flex-wrap items-center justify-between gap-3 rounded-2xl bg-cream px-4 py-3">
-                  <span className="font-display text-xl font-extrabold tracking-wide text-plum-900">
-                    {account.number}
-                  </span>
-                  <CopyButton
-                    value={account.number.replace(/\s+/g, "")}
-                    label={t.copy}
-                    copiedLabel={t.copied}
-                  />
-                </div>
-                {account.name && (
-                  <p className="mt-3 text-sm text-muted">
-                    {t.mobileMoney.name} : <span className="font-semibold text-plum-900">{account.name}</span>
-                  </p>
-                )}
+                <ul className="mt-4 grid gap-3">
+                  {mobileMoney.map((account) => (
+                    <li
+                      key={account.operator + account.number}
+                      className="flex flex-wrap items-center justify-between gap-3 rounded-2xl bg-cream px-4 py-3"
+                    >
+                      <div>
+                        <p className="font-display text-xs font-bold uppercase tracking-[0.16em] text-muted">
+                          {account.operator}
+                        </p>
+                        <p className="mt-1 font-display text-xl font-extrabold tracking-wide text-plum-900">
+                          {account.number}
+                        </p>
+                        {account.name && (
+                          <p className="mt-1 text-sm text-muted">
+                            {t.mobileMoney.name} :{" "}
+                            <span className="font-semibold text-plum-900">{account.name}</span>
+                          </p>
+                        )}
+                      </div>
+                      <CopyButton
+                        value={account.number.replace(/\s+/g, "")}
+                        label={t.copy}
+                        copiedLabel={t.copied}
+                      />
+                    </li>
+                  ))}
+                </ul>
               </div>
-            ))}
+            )}
 
-            {bank.iban && (
+            {hasBank && (
               <div className={cardClass}>
                 <CardTitle Icon={Landmark} tone={tones[1]} title={t.bank.title} />
                 <dl className="mt-5 grid gap-3 text-sm">
@@ -161,17 +170,28 @@ export function Donate({ t }: { t: Dictionary["donate"] }) {
                       <dd className="font-semibold text-plum-900">{bank.bank}</dd>
                     </div>
                   )}
-                  <div>
-                    <dt className="text-muted">{t.bank.iban}</dt>
-                    <dd className="mt-1 flex flex-wrap items-center justify-between gap-3 rounded-2xl bg-cream px-4 py-3">
-                      <span className="break-all font-mono font-semibold text-plum-900">{bank.iban}</span>
-                      <CopyButton
-                        value={bank.iban.replace(/\s+/g, "")}
-                        label={t.copy}
-                        copiedLabel={t.copied}
-                      />
-                    </dd>
-                  </div>
+                  {bank.account && (
+                    <div>
+                      <dt className="text-muted">{t.bank.account}</dt>
+                      <dd className="mt-1 flex flex-wrap items-center justify-between gap-3 rounded-2xl bg-cream px-4 py-3">
+                        <span className="break-all font-mono font-semibold text-plum-900">{bank.account}</span>
+                        <CopyButton value={bank.account} label={t.copy} copiedLabel={t.copied} />
+                      </dd>
+                    </div>
+                  )}
+                  {bank.iban && (
+                    <div>
+                      <dt className="text-muted">{t.bank.iban}</dt>
+                      <dd className="mt-1 flex flex-wrap items-center justify-between gap-3 rounded-2xl bg-cream px-4 py-3">
+                        <span className="break-all font-mono font-semibold text-plum-900">{bank.iban}</span>
+                        <CopyButton
+                          value={bank.iban.replace(/\s+/g, "")}
+                          label={t.copy}
+                          copiedLabel={t.copied}
+                        />
+                      </dd>
+                    </div>
+                  )}
                   {bank.bic && (
                     <div>
                       <dt className="text-muted">{t.bank.bic}</dt>

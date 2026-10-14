@@ -169,13 +169,14 @@ const en: Dictionary = {
     },
     mobileMoney: {
       title: "Mobile Money",
-      text: "Send your gift to the number below.",
+      text: "Send your gift to one of the numbers below.",
       name: "Account name",
     },
     bank: {
       title: "Bank transfer",
       holder: "Account holder",
       bank: "Bank",
+      account: "Account number",
       iban: "IBAN",
       bic: "BIC / SWIFT",
     },

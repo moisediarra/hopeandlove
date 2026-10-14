@@ -175,13 +175,14 @@ const fr = {
     },
     mobileMoney: {
       title: "Mobile Money",
-      text: "Envoyez votre don au numéro ci-dessous.",
+      text: "Envoyez votre don à l’un des numéros ci-dessous.",
       name: "Nom du compte",
     },
     bank: {
       title: "Virement bancaire",
       holder: "Titulaire",
       bank: "Banque",
+      account: "Numéro de compte",
       iban: "IBAN",
       bic: "BIC / SWIFT",
     },
